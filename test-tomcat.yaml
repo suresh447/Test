@@ -6,7 +6,7 @@
 
   tasks:
   - name: Download WAR to server
-    command: wget http://18.216.86.13:8080/job/gameoflife-tomcat/ws/gameoflife-web/target/gameoflife.war -O {{ warRemotePath }}/{{ warName }}
+    command: wget http://13.59.234.253:8080/job/jenkins-ansible/ws/gameoflife-web/target/gameoflife.war -O {{ warRemotePath }}/{{ warName }}
   
   - name: Unzip WAR file
     unarchive: src={{ warRemotePath }}/{{ warName }} dest=/var/lib/tomcat7/webapps/ROOT/ copy=no mode=0755 owner=tomcat8 group=tomcat8
