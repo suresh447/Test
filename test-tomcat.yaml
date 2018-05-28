@@ -1,0 +1,21 @@
+---
+- hosts: tomcatServer
+  vars:
+  - warName: gameoflife.war
+  - warRemotePath: /opt/
+
+  tasks:
+  - name: Download WAR to server
+    command: wget http://18.216.86.13:8080/job/gameoflife-tomcat/ws/gameoflife-web/target/gameoflife.war -O {{ warRemotePath }}/{{ warName }}
+  
+  - name: Unzip WAR file
+    unarchive: src={{ warRemotePath }}/{{ warName }} dest=/var/lib/tomcat7/webapps/ROOT/ copy=no mode=0755 owner=tomcat8 group=tomcat8
+    notify:
+        - restart tomcat8
+   
+  - name: Delete remote war file
+    file: path={{ warRemotePath }}/{{ warName }} state=absent
+
+  handlers:
+    - name: Restart tomcat8
+      service: name=tomcat8 state=restarted
