@@ -1,5 +1,5 @@
 ---
-- hosts: tomcatServer
+- hosts: webserver
   vars:
   - warName: gameoflife.war
   - warRemotePath: /opt/
