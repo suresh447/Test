@@ -21,8 +21,8 @@
   # deployig gameoflife war in tomcat
   - name: "copying war file into webapps"
     get_url:
-    url: http://18.188.19.117:8080/job/gameoflife123/ws/gameoflife-web/target/gameoflife.war
-    dest: /opt/tomcat/webapps/gameoflife.war
+      url: http://18.188.19.117:8080/job/gameoflife123/ws/gameoflife-web/target/gameoflife.war
+      dest: /opt/tomcat/webapps/gameoflife.war
   #  copy:
   #  src: 10.10.2.220:/var/lib/jenkins/workspace/gameoflife-tomcat/gameoflife-web/target/gameoflife.war
   #  dest: 10.10.2.39:/opt/tomcat/webapps/
