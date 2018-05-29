@@ -21,8 +21,8 @@
   # deployig gameoflife war in tomcat
   - name: "copying war file into webapps"
     copy:
-    src: "{{jenkins_ip}}:/var/lib/jenkins/workspace/gameoflife-tomcat/gameoflife-web/target/gameoflife.war"
-    dest: "{{tomcat_ip}}:/opt/tomcat/webapps/"
+    src: {{jenkins_ip}}:/var/lib/jenkins/workspace/gameoflife-tomcat/gameoflife-web/target/gameoflife.war
+    dest: {{tomcat_ip}}:/opt/tomcat/webapps/
     remote_src: yes      
     notify: Restart tomcat8    
 - handlers:
