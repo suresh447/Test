@@ -6,9 +6,10 @@
   #  jenkins_ip: 10.10.2.39
 
   tasks:
-  - name: "updating package"
-    apt:
-      update_cache: yes
+  - name: "upgrading package"
+    yum:
+      name: '*'
+      state: latest
  # - name: "install tomcat8"
  #   apt: 
  #     name: tomcat8
