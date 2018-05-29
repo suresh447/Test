@@ -1,9 +1,9 @@
 ---
 - hosts: webserver
   become: yes
-  vars:
-    tomcat_ip: 10.10.2.220
-    jenkins_ip: 10.10.2.39
+  #vars:
+  #  tomcat_ip: 10.10.2.220
+  #  jenkins_ip: 10.10.2.39
 
   tasks:
   - name: "updating package"
