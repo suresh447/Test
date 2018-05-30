@@ -1,5 +1,5 @@
 ---
-- hosts: webserver
+- hosts: 10.10.2.220
   become: yes
   #vars:
   #  tomcat_ip: 10.10.2.220
