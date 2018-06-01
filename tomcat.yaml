@@ -22,7 +22,7 @@
   # deployig gameoflife war in tomcat
   - name: "copying war file into webapps"
     get_url:
-      url: http://ftp-nyc.osuosl.org/pub/jenkins/war-stable/2.107.3/jenkins.war
+      url: http://13.58.133.251:8080/job/gameoflife123/ws/gameoflife-web/target/gameoflife.war
       dest: /opt/tomcat/webapps/
       mode: 755
     notify: Restart tomcat    
