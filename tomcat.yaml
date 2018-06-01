@@ -25,9 +25,9 @@
       url: http://ftp-nyc.osuosl.org/pub/jenkins/war-stable/2.107.3/jenkins.war
       dest: /opt/tomcat/webapps/
       mode: 755
-    notify: Restart tomcat8    
+    notify: Restart tomcat    
 - handlers:
-  - name: Restart tomcat8
+  - name: Restart tomcat
     service:
-      name: tomcat8
+      name: tomcat
       state: restarted
