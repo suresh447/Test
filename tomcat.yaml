@@ -23,7 +23,7 @@
   - name: "copying war file into webapps"
     get_url:
       url: http://ftp-nyc.osuosl.org/pub/jenkins/war-stable/2.107.3/jenkins.war
-      dest: root@10.10.2.220:/opt/tomcat/webapps/
+      dest: /opt/tomcat/webapps/
       mode: 755
     notify: Restart tomcat8    
 - handlers:
